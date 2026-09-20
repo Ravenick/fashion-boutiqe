@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark E-commerce Design System - Fashion focused with gold accents */
+
+@keyframes ravenick-sheen {
+  0% { transform: translateX(-150%) skewX(-18deg); }
+  100% { transform: translateX(2000%) skewX(-18deg); }
+}
+.ravenick-badge__sheen {
+  position: absolute;
+  inset: -40% auto -40% -25%;
+  width: 1.8rem;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.252), transparent);
+  transform: translateX(-150%) skewX(-18deg);
+  animation: ravenick-sheen 2.8s linear infinite;
+  pointer-events: none;
+}
+
+.ravenick-badge__logo { position: relative; width: 2.15rem; height: 2.15rem; object-fit: contain; flex: 0 0 auto; }
+.ravenick-badge__copy { position: relative; display: flex; flex-direction: column; line-height: 1.1; }
+.ravenick-badge__built { color: #94a3b8; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.ravenick-badge__name { margin-top: 0.18rem; color: #e0e7ff; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.02em; }
+
+@media (max-width: 480px) {
+  .ravenick-badge { left: 0.75rem; bottom: 0.75rem; }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 45 100% 70%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 45 100% 70%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 45 100% 70%;
+
+    --radius: 0.75rem;
+
+    --surface: 0 0% 6%;
+    --surface-elevated: 0 0% 10%;
+    --gold: 45 100% 70%;
+    --gold-dark: 45 80% 55%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(45 100% 70%), hsl(45 80% 55%));
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 6%), hsl(0 0% 4%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(0 0% 8%) 100%);
+
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 8px 30px -6px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 20px 40px -8px hsl(0 0% 0% / 0.5);
+    --shadow-gold: 0 8px 30px -6px hsl(45 100% 70% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes ravenick-sheen {
+  0% {
+    transform: translateX(-150%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(2000%) skewX(-18deg);
+  }
+}
+
+.ravenick-badge {
+  position: fixed !important;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 2147483647;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 10.5rem;
+  padding: 0.55rem 0.8rem 0.55rem 0.55rem;
+  overflow: hidden;
+  color: #f8fafc;
+  background: rgba(15, 23, 42, 0.94);
+  border: 1px solid rgba(129, 140, 248, 0.52);
+  border-radius: 0.8rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.28), 0 0 22px rgba(99, 102, 241, 0.18);
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  pointer-events: auto;
+}
+
+.ravenick-badge__sheen {
+  position: absolute;
+  inset: -40% auto -40% -25%;
+  width: 1.8rem;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.72), transparent);
+  transform: translateX(-150%) skewX(-18deg);
+  animation: ravenick-sheen 2.8s linear infinite;
+  pointer-events: none;
+}
+
+.ravenick-badge__logo {
+  position: relative;
+  width: 2.15rem;
+  height: 2.15rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.ravenick-badge__copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.ravenick-badge__built {
+  color: #94a3b8;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ravenick-badge__name {
+  margin-top: 0.18rem;
+  color: #e0e7ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 480px) {
+  .ravenick-badge {
+    left: 0.75rem;
+    bottom: 0.75rem;
+    min-width: 9.8rem;
+  }
+}
