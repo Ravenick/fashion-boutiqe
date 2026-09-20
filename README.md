@@ -7,7 +7,8 @@ A premium Nigerian fashion storefront built by Nelson Emmanuel | Ravenick. Naira
 
 ## Preview
 
-![Ravenick logo](public/oc-logo-no-bg.png)
+![mobile](./public/iPhone-14-PRO-fashion-boutiqe.vercel.app.webp)
+![desktop](./public/Screenshot 2026-09-20 205305.png)
 
 ## Features
 
